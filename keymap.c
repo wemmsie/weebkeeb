@@ -85,20 +85,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 ############ RGB LED SETUP ############
 #####################################*/
 
-uint8_t min(uint8_t a, uint8_t b) {
-   if (a < b) {
-      return a;
-   }
-   return b;
-}
-
-uint8_t max(uint8_t a, uint8_t b) {
-   if (a > b) {
-      return a;
-   }
-   return b;
-}
-
 void set_range(uint8_t start, uint8_t stop, uint8_t led_min, uint8_t led_max, uint8_t red, uint8_t green, uint8_t blue) {
    if (stop < led_min || led_max < start) {
       // Out of range
@@ -111,10 +97,6 @@ void set_range(uint8_t start, uint8_t stop, uint8_t led_min, uint8_t led_max, ui
 }
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    if (!rgb_matrix_indicators_user()) {
-      return false;
-    }
-
     if (host_keyboard_led_state().caps_lock) {
         RGB_MATRIX_INDICATOR_SET_COLOR(23, 217, 33, 33); 
     }
