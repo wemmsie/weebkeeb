@@ -18,8 +18,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // #define USE_I2C
-#define MASTER_RIGHT
-#define SPLIT_LAYER_STATE_ENABLE
+#define EE_HANDS
+//#define SPLIT_LAYER_STATE_ENABLE
+#define RGB_MATRIX_KEYPRESSES
+
+/* Set tapping term for tapdance */
+#define TAPPING_TERM 200
 
 /* key matrix size */
 // Rows are doubled-up
@@ -32,7 +36,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS_RIGHT { B1, F0, F5, B4, B5 }
 #define MATRIX_COL_PINS_RIGHT { D4, D6, D7, C7, F1, F4 }
 #define SPLIT_HAND_PIN D5
-
 
 #define ENCODERS_PAD_A { B3, F6 }
 #define ENCODERS_PAD_B { B2, F7 }
@@ -50,9 +53,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Set 0 if debouncing isn't needed */
 #define DEBOUNCE 5
-
-/* Set tapping term for tapdance */
-#define TAPPING_TERM 200
 
 /* serial.c configuration for split keyboard */
 #define SOFT_SERIAL_PIN D0
