@@ -91,7 +91,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case PWRD:
             if (record->event.pressed) {
-                // SEND_STRING("Pickles84!" SS_TAP(X_ENTER));
                 send_string_with_delay("censored!" SS_TAP(X_ENTER), 40);
             }
             return false;
