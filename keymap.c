@@ -91,14 +91,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case PWRD:
             if (record->event.pressed) {
-                // SEND_STRING("Pickles84!" SS_TAP(X_ENTER));
-                send_string_with_delay("Pickles84!" SS_TAP(X_ENTER), 40);
+                send_string_with_delay("passwordString" SS_TAP(X_ENTER), 40);
             }
             return false;
             break;
         case EMDASH:
             if (record->event.pressed) {
-                send_string_with_delay(KC_LALT KC_KP_0 KC_KP_1 KC_KP_5 KC_KP_1, 40);
+                send_string_with_delay(SS_LALT(SS_TAP(X_KP_0) SS_TAP(X_KP_1) SS_TAP(X_KP_5) SS_TAP(X_KP_1)), 40);
             }
             return false;
             break;
@@ -152,8 +151,8 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
                 // numpad
                 RGB_MATRIX_INDICATOR_SET_COLOR(i, 115, 7, 7);
             }
-            else if ((i >= 44 && i <= 45) || i == 10) {
-                // plus equal and screnshot key
+            else if (i == 45 || i == 10) {
+                // emdash and screnshot key
                 RGB_MATRIX_INDICATOR_SET_COLOR(i, 133, 119, 0);
             }
             else if ((i >= 56 && i <= 57) || i == 21 || i == 19) {
