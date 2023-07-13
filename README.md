@@ -14,3 +14,5 @@ Iris Rev 7 with some fancy layer 2 shenanigans and LED dependencies.
 Here is a great reference for the LED layout thanks to [kahgoh](https://github.com/kahgoh) based on [this writeup](https://kahdev.hashnode.dev/finding-the-led-indexes-on-the-iris).
 
 ![kahgoh_leds](https://cdn.hashnode.com/res/hashnode/image/upload/v1664287501742/hSBclLM6v.png?auto=compress,format&format=webp)
+
+**NOTE:** Not able to be compiled with current code set until em dash bits get fixed. Update planned 7/14/23.
