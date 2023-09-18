@@ -3,7 +3,7 @@ Iris Rev 7 with some fancy layer 2 shenanigans and LED dependencies.
 
 ## Features
 - Layer 2 with various LED color changes to indicate hidden keys. Helps for the newly initiated to Iris
-- This layer 2 also has some shift shortcuts to reduce vertical reach and keep all numerical special characters to the layer 2 num pad
+- Also has some shift shortcuts on L2 to reduce vertical reach and keep all numerical special characters to the "num pad"
 - Includes some essential coding symbols on L2 - change to your liking!
 - All LED config is based off of LED matrix
 - Brightness of LEDs limited for low voltages of direct input into a KVM switch for switching key shortcuts
